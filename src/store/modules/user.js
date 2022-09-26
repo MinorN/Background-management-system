@@ -15,14 +15,14 @@ const mutations = {
   }
 }
 const actions = {
-  async LOGIN(context, data) {
+  async login(context, data) {
     const result = await login(data)
     context.commit('SET_TOKEN', result)
   }
 }
 
 export default {
-  namespace: true,
+  namespaced: true,
   state,
   mutations,
   actions
